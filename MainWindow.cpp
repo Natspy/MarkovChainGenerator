@@ -26,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(generateButton, &QPushButton::clicked, this, &MainWindow::generateSequence);
 
     textArea = new QTextEdit(this);
+    textArea->setPlaceholderText("Welcome to Markov Text Chain Generator!\nPlease provide the text file to generate from.");
     textArea->setReadOnly(true);
 
     layout->addWidget(loadButton);
