@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
-project(MarkovChanGenerator)
+project(MarkovChainGenerator)
 
 set(CMAKE_CXX_STANDARD 17)
 # Find includes in the build directories
