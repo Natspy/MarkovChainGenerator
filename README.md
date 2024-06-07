@@ -37,5 +37,5 @@ Po uruchomieniu aplikacji, postępuj zgodnie z poniższymi krokami:
 
 3. **Generowanie tekstu**: Kliknij przycisk "Generate Sequence" aby wygenerować tekst na podstawie wprowadzonych danych. Wygenerowany tekst pojawi się w polu poniżej.
 
-![Zrzut Ekranu](resources/screen-placeholders.PNG)
+![Zrzut Ekranu](resources/screen-start.PNG)
 ![Zrzut Ekranu](resources/screen-app.PNG)
