@@ -12,7 +12,6 @@ int main(int argc, char *argv[]) {
     string text = "xyzxyzxyzxyzxyzxyzxyz";
     MarkovChain markovChain(text, 2);
 
-    cout << "Frequency of 'xy': " << markovChain.freq("xy") << endl;
     cout << "Frequency of 'xy' followed by 'z': " << markovChain.freq("xy", "z") << endl;
     cout << "Random event following 'xy': " << markovChain.rand("xy") << endl;
     cout << "Generated sequence starting with 'xy': " << markovChain.gen("xy", 20) << endl;

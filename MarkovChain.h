@@ -20,7 +20,7 @@ private:
     void buildMarkovChain();
     string text;
     int k;
-    unordered_map<std::string, vector<string>> markovChain;
+    unordered_map<string, vector<string>> markovChain;
     default_random_engine randomEngine;
 };
 
