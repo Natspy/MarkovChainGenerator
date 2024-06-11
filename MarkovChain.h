@@ -6,20 +6,22 @@
 #include <vector>
 #include <random>
 
+using namespace std;
+
 class MarkovChain {
 public:
-    MarkovChain(const std::string &text, int k);
-    int freq(const std::string &kevent) const;
-    int freq(const std::string &kevent, const std::string &c) const;
-    std::string rand(const std::string &kevent);
-    std::string gen(const std::string &kevent, int T);
+    MarkovChain(const string &text, int k);
+    int freq(const string &kevent) const;
+    int freq(const string &kevent, const string &c) const;
+    string rand(const string &kevent);
+    string gen(const string &kevent, int T);
 
 private:
     void buildMarkovChain();
-    std::string text;
+    string text;
     int k;
-    std::unordered_map<std::string, std::vector<std::string>> markovChain;
-    std::default_random_engine randomEngine;
+    unordered_map<std::string, vector<string>> markovChain;
+    default_random_engine randomEngine;
 };
 
 #endif //MARKOVCHAIN_H

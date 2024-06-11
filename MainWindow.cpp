@@ -6,6 +6,8 @@
 #include <QMessageBox>
 #include <QVBoxLayout>
 
+using namespace std;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent) {
 
@@ -45,19 +47,19 @@ void MainWindow::loadFile() {
     QString filePath = QFileDialog::getOpenFileName(this, "Open Log File", "", "Text Files (*.txt)");
     if (!filePath.isEmpty()) {
         try {
-            std::ifstream file(filePath.toStdString());
+            ifstream file(filePath.toStdString());
             if (!file.is_open()) {
-                throw std::runtime_error("Failed to open file: " + filePath.toStdString());
+                throw runtime_error("Failed to open file: " + filePath.toStdString());
             }
-            std::string text;
-            std::string line;
-            while (std::getline(file, line)) {
+            string text;
+            string line;
+            while (getline(file, line)) {
                 text += line;
             }
 
-            markov = std::make_unique<MarkovChain>(text, 2);
+            markov = make_unique<MarkovChain>(text, 2);
             textArea->append("Loaded file: " + filePath + "\n");
-        } catch (const std::exception &ex) {
+        } catch (const exception &ex) {
             QMessageBox::warning(this, "Error", "Error reading file: " + QString::fromStdString(ex.what()));
         }
     }

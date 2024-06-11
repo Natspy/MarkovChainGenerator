@@ -9,6 +9,8 @@
 
 #include "MarkovChain.h"
 
+using namespace std;
+
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
@@ -27,7 +29,7 @@ private:
     QLineEdit *lengthField;
     QPushButton *generateButton;
     QTextEdit *textArea;
-    std::unique_ptr<MarkovChain> markov;
+    unique_ptr<MarkovChain> markov;
 };
 
 #endif // MAINWINDOW_H

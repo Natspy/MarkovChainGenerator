@@ -5,15 +5,17 @@
 #include <iostream>
 #include "MainWindow.h"
 
+using namespace std;
+
 int main(int argc, char *argv[]) {
 
-    std::string text = "xyzxyzxyzxyzxyzxyzxyz";
+    string text = "xyzxyzxyzxyzxyzxyzxyz";
     MarkovChain markovChain(text, 2);
 
-    std::cout << "Frequency of 'xy': " << markovChain.freq("xy") << std::endl;
-    std::cout << "Frequency of 'xy' followed by 'z': " << markovChain.freq("xy", "z") << std::endl;
-    std::cout << "Random event following 'xy': " << markovChain.rand("xy") << std::endl;
-    std::cout << "Generated sequence starting with 'xy': " << markovChain.gen("xy", 20) << std::endl;
+    cout << "Frequency of 'xy': " << markovChain.freq("xy") << endl;
+    cout << "Frequency of 'xy' followed by 'z': " << markovChain.freq("xy", "z") << endl;
+    cout << "Random event following 'xy': " << markovChain.rand("xy") << endl;
+    cout << "Generated sequence starting with 'xy': " << markovChain.gen("xy", 20) << endl;
 
     QApplication app(argc, argv);
     MainWindow window;
