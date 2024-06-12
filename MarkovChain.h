@@ -11,7 +11,6 @@ using namespace std;
 class MarkovChain {
 public:
     MarkovChain(const string &text, int k);
-    int freq(const string &kevent) const;
     int freq(const string &kevent, const string &c) const;
     string rand(const string &kevent);
     string gen(const string &kevent, int T);
