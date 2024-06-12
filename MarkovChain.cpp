@@ -19,12 +19,6 @@ void MarkovChain::buildMarkovChain() {
     }
 }
 
-int MarkovChain::freq(const string &kevent, const string &c) const {
-    auto it = markovChain.find(kevent);
-    if (it == markovChain.end()) return 0;
-    return count(it->second.begin(), it->second.end(), c);
-}
-
 string MarkovChain::rand(const string &kevent) {
     auto it = markovChain.find(kevent);
     if (it == markovChain.end() || it->second.empty()) return "";

@@ -6,7 +6,7 @@ Aplikacja wykorzystuje **framework Qt** do budowy graficznego interfejsu użytko
 ### Klasa MarkovChain
 
 Klasa `MarkovChain` zawiera logikę niezbędną do generowania tekstu na podstawie łańcucha Markowa.
-Znajduje się w niej implementacja metod do wczytywania tekstu z pliku, budowy łańcucha Markova, oraz generowania nowego tekstu na podstawie zadanego początkowego fragmentu (k-event).
+Znajduje się w niej implementacja metod do budowy łańcucha Markova oraz generowania nowego tekstu na podstawie zadanego początkowego fragmentu (k-event).
 
 ### Klasa MainWindow
 
